@@ -17,5 +17,25 @@ function fetchCharacters() {
     });
 }
 
+function displayCharacterDetails(character) {
+  detailedInfo.innerHTML = `
+    <h2>${character.name}</h2>
+    <img src="${character.image}" alt="${character.name}">
+    <p>Votes: <span id="vote-count">${character.votes}</span></p>
+    <form id="votes-form">
+      <input type="number" id="votes" placeholder="Enter votes" required>
+      <button type="submit">Add Votes</button>
+    </form>
+    <button id="reset-votes">Reset Votes</button>
+  `;
+
+    document.getElementById("votes").value = "";
+  });
+}
+
+function resetVotes(character) {
+  const voteCount = document.getElementById("vote-count");
+  voteCount.textContent = 0;
+}
 
 fetchCharacters();
