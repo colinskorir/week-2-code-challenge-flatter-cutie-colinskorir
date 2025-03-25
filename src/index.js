@@ -45,3 +45,8 @@ function displayCharacterDetails(character) {
   });
 }
 
+function resetVotes(character) {
+  const voteCount = document.getElementById("vote-count");
+  voteCount.textContent = 0;
+}
+
