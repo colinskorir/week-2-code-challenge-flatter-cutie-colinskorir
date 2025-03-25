@@ -28,8 +28,22 @@ function displayCharacterDetails(character) {
     </form>
     <button id="reset-votes">Reset Votes</button>
   `;
+
+  const resetButton = document.getElementById("reset-votes");
+  resetButton.addEventListener("click", () => resetVotes(character));
+
+  const votesForm = document.getElementById("votes-form");
+  votesForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+    const voteInput = document.getElementById("votes").value;
+    const voteCount = document.getElementById("vote-count");
+
+    const newVotes = parseInt(voteCount.textContent) + parseInt(voteInput);
+    voteCount.textContent = newVotes;
+
+    document.getElementById("votes").value = "";
+  });
 }
-  
 
 function resetVotes(character) {
   const voteCount = document.getElementById("vote-count");
