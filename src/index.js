@@ -39,7 +39,7 @@ function displayCharacterDetails(character) {
     const voteCount = document.getElementById("vote-count");
 
     const newVotes = parseInt(voteCount.textContent) + parseInt(voteInput);
-    
+    voteCount.textContent = newVotes;
 
     
   });
