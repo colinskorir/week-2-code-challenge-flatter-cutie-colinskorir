@@ -41,7 +41,7 @@ function displayCharacterDetails(character) {
     const newVotes = parseInt(voteCount.textContent) + parseInt(voteInput);
     voteCount.textContent = newVotes;
 
-    
+    document.getElementById("votes").value = "";
   });
 }
 
