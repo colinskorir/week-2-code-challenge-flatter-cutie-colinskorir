@@ -28,7 +28,7 @@ function displayCharacterDetails(character) {
     </form>
     <button id="reset-votes">Reset Votes</button>
   `;
-
+}
   
 
 function resetVotes(character) {
