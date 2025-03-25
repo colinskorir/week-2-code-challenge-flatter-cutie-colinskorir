@@ -38,16 +38,5 @@ function displayCharacterDetails(character) {
     const voteInput = document.getElementById("votes").value;
     const voteCount = document.getElementById("vote-count");
 
-    const newVotes = parseInt(voteCount.textContent) + parseInt(voteInput);
-    voteCount.textContent = newVotes;
-
-    document.getElementById("votes").value = "";
   });
-}
 
-function resetVotes(character) {
-  const voteCount = document.getElementById("vote-count");
-  voteCount.textContent = 0;
-}
-
-fetchCharacters();
