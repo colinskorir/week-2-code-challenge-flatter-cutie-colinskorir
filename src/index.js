@@ -50,3 +50,4 @@ function resetVotes(character) {
   voteCount.textContent = 0;
 }
 
+fetchCharacters();
