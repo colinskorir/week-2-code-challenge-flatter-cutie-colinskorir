@@ -29,9 +29,7 @@ function displayCharacterDetails(character) {
     <button id="reset-votes">Reset Votes</button>
   `;
 
-    document.getElementById("votes").value = "";
-  });
-}
+  
 
 function resetVotes(character) {
   const voteCount = document.getElementById("vote-count");
